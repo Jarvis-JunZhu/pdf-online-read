@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploaded PDFs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add a new CSS file for list-specific styles if needed later:
+    <link rel="stylesheet" href="css/list_style.css"> -->
+</head>
+<body>
+    <header>
+        <h1>Uploaded PDF Files</h1>
+        <nav>
+            <a href="index.html">Back to Upload Page</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="pdf-list-controls">
+            <h2>PDF List</h2>
+            <div>
+                <label for="sort-by">Sort by:</label>
+                <select id="sort-by">
+                    <option value="upload_timestamp_desc">Newest First</option>
+                    <option value="upload_timestamp_asc">Oldest First</option>
+                    <option value="filename_asc">Filename (A-Z)</option>
+                    <option value="filename_desc">Filename (Z-A)</option>
+                    <option value="filesize_asc">Size (Smallest First)</option>
+                    <option value="filesize_desc">Size (Largest First)</option>
+                </select>
+            </div>
+        </section>
+
+        <section id="pdf-list-display">
+            <div id="pdf-list-container">
+                <!-- PDFs will be loaded here by JavaScript -->
+                <p class="message-info">Loading PDF list...</p>
+            </div>
+            <div id="pagination-controls">
+                <!-- Pagination will be loaded here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 PDF Previewer App</p>
+    </footer>
+
+    <script src="js/list.js"></script>
+</body>
+</html>

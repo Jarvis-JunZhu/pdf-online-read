@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+*.venv
+env/
+venv/
+ENV/
+VENV/
+*.egg-info/
+.installed.cfg
+*.egg
+instance/
+.webassets-cache/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploads
+uploads/
+*.DS_Store
+
+# Libraries / Dependencies
+static/lib/
+
+# IDE specific
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Other
+.pytest_cache/
+.coverage
+htmlcov/
+pip-wheel-metadata/
+local_settings.py
+celerybeat-schedule
+*.log
+*.tmp
+*.swp
+*~
+*.bak
