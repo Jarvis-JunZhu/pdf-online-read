@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Specific styles for viewer.html can go here or in a separate file */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevent scrollbars on body if iframe is full page */
+        }
+        #viewer-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        #viewer-header {
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-bottom: 1px solid #ccc;
+            text-align: center; /* Center the link */
+        }
+        #viewer-header a {
+            text-decoration: none;
+            color: #337ab7;
+            font-weight: bold;
+        }
+        #pdf-iframe {
+            flex-grow: 1; /* Takes up remaining space */
+            border: none; /* Remove iframe border */
+            width: 100%;
+            height: 100%; /* Fallback for browsers not supporting flex-grow well on iframe */
+        }
+        #error-message {
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="viewer-container">
+        <div id="viewer-header">
+            <a href="list.html">Back to PDF List</a>
+        </div>
+        <iframe id="pdf-iframe" title="PDF Document Viewer"></iframe>
+        <div id="error-message" style="display: none;"></div>
+    </div>
+    <script src="js/viewer.js"></script>
+</body>
+</html>
